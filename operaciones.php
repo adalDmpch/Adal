@@ -56,6 +56,10 @@
                 $respuesta = $num1 + $num2;
             } elseif ($operation == 'restar') {
                 $respuesta = $num1 - $num2;
+            } elseif ($operation == 'multiplicar') {
+                $respuesta = $num1 * $num2;
+            } elseif ($operation == 'dividir') {
+                $respuesta = $num1 / $num2;
             }
         } else {
             $respuesta = "Por favor, ingrese valores numéricos válidos.";
@@ -66,12 +70,16 @@
     <div class="container">
         <h1>BIENVENIDO A LAS OPERACIONES</h1>
             <form action="operaciones.php" method="post">
+                <center>
                 <label for="num1">Dato 1</label>
                 <input type="text" id="num1" name="num1" required><br><br>
                 <label for="num2">Dato 2</label>
                 <input type="text" id="num2" name="num2" required><br><br>
+                </center>
                 <button type="submit" name="operation" value="sumar">Sumar</button>
                 <button type="submit" name="operation" value="restar" style="margin-left: 30px;">Restar</button>
+                <button type="submit" name="operation" value="multiplicar">multiplicar</button>
+                <button type="submit" name="operation" value="dividir" style="margin-left: 30px;">dividir</button>
                 <br><br>
                 <label for="respuesta">Respuesta: </label>
                 <?php
